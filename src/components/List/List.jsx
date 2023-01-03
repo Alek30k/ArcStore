@@ -39,42 +39,6 @@ const List = () => {
       oldPrice: 19,
       price: 12,
     },
-    {
-      id: 5,
-      img: "https://images.pexels.com/photos/1972115/pexels-photo-1972115.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      img2: "https://images.pexels.com/photos/1163194/pexels-photo-1163194.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      title: "sgdahshdgjasghdjh",
-      isNew: true,
-      oldPrice: 19,
-      price: 12,
-    },
-    {
-      id: 6,
-      img: "https://images.pexels.com/photos/1972115/pexels-photo-1972115.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      img2: "https://images.pexels.com/photos/1163194/pexels-photo-1163194.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      title: "sgdahshdgjasghdjh",
-      isNew: true,
-      oldPrice: 19,
-      price: 12,
-    },
-    {
-      id: 7,
-      img: "https://images.pexels.com/photos/1972115/pexels-photo-1972115.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      img2: "https://images.pexels.com/photos/1163194/pexels-photo-1163194.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      title: "sgdahshdgjasghdjh",
-      isNew: true,
-      oldPrice: 19,
-      price: 12,
-    },
-    {
-      id: 8,
-      img: "https://images.pexels.com/photos/1972115/pexels-photo-1972115.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      img2: "https://images.pexels.com/photos/1163194/pexels-photo-1163194.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      title: "sgdahshdgjasghdjh",
-      isNew: true,
-      oldPrice: 19,
-      price: 12,
-    },
   ];
 
   return (
