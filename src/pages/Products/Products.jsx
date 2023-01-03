@@ -8,9 +8,9 @@ const Products = () => {
   const [maxPrice, setMaxPrice] = useState(1000);
   const [sort, setSort] = useState(null);
   const [selectedSubCats, setSelectedSubCats] = useState([]);
-  console.log(sort);
+
   return (
-    <div>
+    <div className="products">
       <div className="left">
         <div className="filterItem">
           <h2>Product Categories</h2>
