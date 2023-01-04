@@ -59,7 +59,7 @@ const Product = () => {
         >
           <AddShoppingCartIcon /> ADD TO CART
         </button>
-        <div className="link">
+        <div className="links">
           <div className="item">
             <FavoriteBorderIcon /> ADD TO WISH LIST
           </div>
