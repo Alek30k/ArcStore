@@ -1,4 +1,4 @@
-import "./FeaturedProducts.scss";
+import React from "react";
 import Card from "../Card/Card";
 import "./FeaturedProducts.scss";
 import useFetch from "../../hooks/useFetch";
@@ -26,9 +26,6 @@ const FeaturedProducts = ({ type }) => {
           : loading
           ? "loading"
           : data?.map((item) => <Card item={item} key={item.id} />)}
-        {data.map((item) => (
-          <Card item={item} key={item.id} />
-        ))}
       </div>
     </div>
   );
