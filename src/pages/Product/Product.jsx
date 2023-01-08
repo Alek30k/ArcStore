@@ -4,6 +4,7 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import BalanceIcon from "@mui/icons-material/Balance";
 import useFetch from "../../hooks/useFetch";
+import { useParams } from "react-router-dom";
 
 const Product = () => {
   const id = useParams().id;
@@ -16,8 +17,16 @@ const Product = () => {
     <div className="product">
       <div className="left">
         <div className="images">
-          <img src={images[0]} alt="" onClick={(e) => setSelectedImg(0)} />
-          <img src={images[1]} alt="" onClick={(e) => setSelectedImg(1)} />
+          <img
+            src={data?.attributes.img?.data?.attributes?.url}
+            alt=""
+            onClick={(e) => setSelectedImg(0)}
+          />
+          <img
+            src={data?.attributes.img2?.data?.attributes?.url}
+            alt=""
+            onClick={(e) => setSelectedImg(1)}
+          />
         </div>
         <div className="mainImg">
           <img src={images[selectedImg]} alt="" />
