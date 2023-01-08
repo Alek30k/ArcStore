@@ -1,34 +1,15 @@
 import "./Cart.scss";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
+import { useSelector } from "react-redux";
 
 const Cart = () => {
-  const data = [
-    {
-      id: 1,
-      img: "https://images.pexels.com/photos/1972115/pexels-photo-1972115.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      img2: "https://images.pexels.com/photos/1163194/pexels-photo-1163194.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      title: "sgda hshdgj asghdjh",
-      desc: "ajsdbaksjdkjahskdgjasvdjfjahsgdhajshkdhaksjdasdasdasd",
-      isNew: true,
-      oldPrice: 19,
-      price: 12,
-    },
-    {
-      id: 2,
-      img: "https://images.pexels.com/photos/1972115/pexels-photo-1972115.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      img2: "https://images.pexels.com/photos/1163194/pexels-photo-1163194.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      title: "sgdahshdgjasghdjh",
-      desc: "ajsdbaksjdkjahskdgjasvdjfjahsgdhajshkdhaksjdasdasdasd",
-      isNew: true,
-      oldPrice: 19,
-      price: 12,
-    },
-  ];
+  const products = useSelector((state) => state.cart.products);
+  // const dispatch = useDispatch();
 
   return (
     <div className="cart">
       <h1>Products in your cart</h1>
-      {data?.map((item) => (
+      {products?.map((item) => (
         <div className="item" key={item.id}>
           <img src={item.img} alt="" />
           <div className="details">
