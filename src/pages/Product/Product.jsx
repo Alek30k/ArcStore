@@ -15,7 +15,6 @@ const Product = () => {
   const dispatch = useDispatch();
   const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
 
-
   return (
     <div className="product">
       {loading ? (
@@ -68,17 +67,17 @@ const Product = () => {
             </div>
             <button
               className="add"
-               onClick={() =>
-              //   dispatch(
-              //     addToCart({
-              //       id: data.id,
-              //       title: data.attributes.title,
-              //       desc: data.attributes.desc,
-              //       price: data.attributes.price,
-              //       img: data.attributes.img.data.attributes.url,
-              //       quantity,
-              //     })
-              //   )
+              onClick={() =>
+                dispatch(
+                  addToCart({
+                    //       id: data.id,
+                    //       title: data.attributes.title,
+                    //       desc: data.attributes.desc,
+                    //       price: data.attributes.price,
+                    //       img: data.attributes.img.data.attributes.url,
+                    //       quantity,
+                  })
+                )
               }
             >
               <AddShoppingCartIcon /> ADD TO CART
