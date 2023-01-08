@@ -24,13 +24,16 @@ const Product = () => {
               <img
                 src={
                   process.env.REACT_APP_UPLOAD_URL +
-                  data?.attributes.img?.data?.attributes?.url
+                  data?.attributes?.img?.data?.attributes?.url
                 }
                 alt=""
                 onClick={(e) => setSelectedImg("img")}
               />
               <img
-                src={data?.attributes.img2?.data?.attributes?.url}
+                src={
+                  process.env.REACT_APP_UPLOAD_URL +
+                  data?.attributes?.img2?.data?.attributes?.url
+                }
                 alt=""
                 onClick={(e) => setSelectedImg("img2")}
               />
