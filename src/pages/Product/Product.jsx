@@ -6,6 +6,7 @@ import BalanceIcon from "@mui/icons-material/Balance";
 import useFetch from "../../hooks/useFetch";
 
 const Product = () => {
+  const id = useParams().id;
   const [selectedImg, setSelectedImg] = useState(0);
   const [quantity, setQuantity] = useState(1);
 
