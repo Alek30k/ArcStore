@@ -8,7 +8,7 @@ import { useParams } from "react-router-dom";
 
 const Product = () => {
   const id = useParams().id;
-  const [selectedImg, setSelectedImg] = useState(0);
+  const [selectedImg, setSelectedImg] = useState("img");
   const [quantity, setQuantity] = useState(1);
 
   const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
@@ -33,7 +33,10 @@ const Product = () => {
               />
             </div>
             <div className="mainImg">
-              <img src={images[selectedImg]} alt="" />
+              <img
+                src={data?.attributes[selectedImg]?.data?.attributes?.url}
+                alt=""
+              />
             </div>
           </div>
           <div className="right">
