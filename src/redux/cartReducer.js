@@ -21,8 +21,8 @@ export const cartSlice = createSlice({
         (item) => item.id !== action.payload
       );
     },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload;
+    resetCart: (state) => {
+      state.products = [];
     },
   },
 });
