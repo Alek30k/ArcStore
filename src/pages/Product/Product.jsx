@@ -49,14 +49,9 @@ const Product = () => {
             </div>
           </div>
           <div className="right">
-            <h1>Title</h1>
-            <span className="price">$199</span>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia
-              tempora exercitationem dolorum sit. Tempore, rem eveniet eligendi
-              quidem hic veritatis, aperiam sapiente ipsa similique suscipit
-              nihil maxime error! Sit, sequi.
-            </p>
+            <h1>{data?.attributes?.title}</h1>
+            <span className="price">${data?.attributes?.price}</span>
+            <p>{data?.attributes?.desc}</p>
             <div className="quantity">
               <button
                 onClick={() =>
