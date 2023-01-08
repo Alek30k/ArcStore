@@ -3,15 +3,13 @@ import "./Product.scss";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import BalanceIcon from "@mui/icons-material/Balance";
+import useFetch from "../../hooks/useFetch";
 
 const Product = () => {
   const [selectedImg, setSelectedImg] = useState(0);
   const [quantity, setQuantity] = useState(1);
 
-  const images = [
-    "https://images.pexels.com/photos/10026491/pexels-photo-10026491.png?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    "https://images.pexels.com/photos/12179283/pexels-photo-12179283.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-  ];
+  const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
 
   return (
     <div className="product">
