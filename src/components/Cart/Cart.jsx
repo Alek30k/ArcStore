@@ -15,6 +15,20 @@ const Cart = () => {
     return total.toFixed(2);
   };
 
+  const handlePayment = async () => {
+    try {
+      const stripe = await stripePromise;
+      const res = await makeRequest.post("/orders", {
+        products,
+      });
+      await stripe.redirectToCheckout({
+        sessionId: res.data.stripeSession.id,
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <div className="cart">
       <h1>Products in your cart</h1>
@@ -38,7 +52,7 @@ const Cart = () => {
         <span>SUBTOTAL</span>
         <span>${totalPrice()}</span>
       </div>
-      <button>PROCEED TO CHECKOUT</button>
+      <button onClick={handlePayment}>PROCEED TO CHECKOUT</button>
       <span className="reset" onClick={() => dispatch(resetCart())}>
         Reset Cart
       </span>
