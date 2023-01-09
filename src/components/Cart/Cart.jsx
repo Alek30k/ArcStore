@@ -18,7 +18,7 @@ const Cart = () => {
   };
 
   const stripePromise = loadStripe(
-    "pk_test_eOTMlr8usx1ctymXqrik0ls700lQCsX2UB"
+    "pk_test_51LWR1rCTlhsOX9GfhjESQ1bu9wYMwpoNoxZcSF3aR0QQAzzsH2uyewThu2I4hy1oFWGfq48N1jkTSb65or0fvC0900JuYognmI"
   );
 
   const handlePayment = async () => {
