@@ -79,6 +79,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
       {open && <Cart />}
     </div>
   );

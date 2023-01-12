@@ -54,4 +54,12 @@
       }
     }
   }
+  .modal-open {
+    background-color: #2879fe;
+    width: 100vw;
+    padding: 200px;
+    height: 150vh;
+    z-index: 999;
+    cursor: pointer;
+  }
 }
