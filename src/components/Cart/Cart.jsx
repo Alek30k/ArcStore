@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { removeItem, resetCart } from "../../redux/cartReducer";
 import { makeRequest } from "../../makeRequest";
 import { loadStripe } from "@stripe/stripe-js";
-import { useState } from "react";
 
 const Cart = () => {
   const products = useSelector((state) => state.cart.products);
