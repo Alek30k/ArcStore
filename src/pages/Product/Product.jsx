@@ -16,13 +16,6 @@ const Product = () => {
   const dispatch = useDispatch();
   const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
 
-  // const id = useParams().id;
-  // const [selectedImg, setSelectedImg] = useState("img");
-  // const [quantity, setQuantity] = useState(1);
-
-  // const dispatch = useDispatch();
-  // const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
-
   return (
     <div className="product">
       {loading ? (
